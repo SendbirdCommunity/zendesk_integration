@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/@zendeskgarden/css-bedrock@7.0.21,npm/@zendeskgarden/css-utilities@4.3.0">
+</head>
+<body>
+  <div id="loading" >Loading...</div>
+  <div id="wrapper">
+    <div>Assingee Agent's Id: <span id="assignee-id"></span></div>
+    <div>Ticket Requester's Id: <span id="requester-id"></span></div>
+
+    <div>Sendbird url</div>
+    <div class="data" id="channel-url"></div>
+    <div>Sendbird Channel member list</div>
+    <div class="data" id="channel_data"></div>
+    <p>Conversation History: </p>
+    <div class="data" id="message-history"></div>
+    
+  </div>
+
+
+  <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+  <script  type="module" src="index.js"></script>
+
+</body>
+</html>

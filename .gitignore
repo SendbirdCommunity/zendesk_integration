@@ -1,0 +1,11 @@
+node_modules
+.parcel-cache
+assets
+.DS_Store
+tmp/*
+assets/background
+assets/tickets_sidebar
+manifest.json
+*.json
+
+
