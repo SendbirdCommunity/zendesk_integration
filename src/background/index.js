@@ -1,11 +1,18 @@
+const client = ZAFClient.init();
 
-var client = ZAFClient.init();
-
-client.on('ticket.saved', function(data) {
-
-  console.log('FROM LOCAL BACKGROUND DEVELOPMENT: Ticket saved ');
+const topBarClientPromise = client.get('instances').then(function(instancesData) {
+  console.log("bacground working")
+  let instances = instancesData.instances;
+  for (let instanceGuid in instances) {
+    if (instances[instanceGuid].location === "top_bar") {
+      return client.instance(instanceGuid);
+    }
+  }
 });
 
-client.on('app.registered', function(){
-  console.log("FROM LOCAL BACKGROUND DEVELOPMENT: Background listener got registered")
-})
+client.on("app.registered",() => {
+  topBarClientPromise.then(topBarClient => {
+      topBarClient.invoke('popover', 'show');
+      topBarClient.invoke('popover', 'hide');
+  });
+});

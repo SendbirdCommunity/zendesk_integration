@@ -1,0 +1,64 @@
+#wrapper{
+    display: grid;
+    height: 500px;
+    background:#f8f9f9;
+    grid-template-columns: 4fr 10fr;
+}
+
+body {
+    font-family: sans-serif;
+  }
+  
+  .App {
+    height: 429px;
+  }
+  
+  .Start {
+    text-align: center;
+    height: 99vh;
+  }
+  
+  .Start-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .Start-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .Start-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .Start-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .sendbird-channel-header__title {
+    left: 35% !important;
+    margin: 0 auto !important;
+  }
+  
+  .sendbird-channel-header__right-icon {
+    display: none;
+  }
+  
