@@ -1,7 +1,6 @@
 const client = ZAFClient.init();
 
 const topBarClientPromise = client.get('instances').then(function(instancesData) {
-  console.log("bacground working")
   let instances = instancesData.instances;
   for (let instanceGuid in instances) {
     if (instances[instanceGuid].location === "top_bar") {
